@@ -79,4 +79,5 @@ git remote add upstream https://github.com/jackyzha0/quartz.git
 - Share tnoe
 - Image converter
 - better pdf export
+- style setting
 ---

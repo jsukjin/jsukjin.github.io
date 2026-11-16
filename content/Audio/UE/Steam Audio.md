@@ -12,16 +12,13 @@ description: Steam Audio 요약
 
 들여쓰기
 
-<details>
-  <summary>여기를 클릭해서 내용을 확인하세요 (제목)</summary>
-  <div markdown="1">
+<details> <summary>여기를 클릭해서 내용을 확인하세요 (제목)</summary> <div markdown="1">
     
     이곳에 펼쳐질 내용을 작성합니다.
     - 리스트도 가능하고
     - **굵은 글씨**도 가능합니다.
 
-  </div>
-</details>
+</div> </details>
 
 
 # 1. Setup

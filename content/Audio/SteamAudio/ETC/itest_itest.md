@@ -20,11 +20,11 @@ description: "[SteamAudio] ITest.h/cpp 분석 (itest module)"
 # 2. 구성 요소
 
 1. `FunctionRegistry`
-	- `typedef void (*Function)()` 
+	- `typedef void (*Function)()`
 		- void 함수 포인터
 	- `registerFunction(name, function)`
 		- 이름으로 함수 등록
-	- `getFunctionName()` 
+	- `getFunctionName()`
 		- 등록된 이름 목록 반환
 	- `runFunction(name)`
 		- 이름으로 함수 실행, 없으면 에러 출력
@@ -82,7 +82,7 @@ public:
         // context 라는 string에 itest_context 함수 주소 저장
         // map 이므로 이름이 중복되면 덮어씀
     }
-    
+
     std::vector<std::string> getFunctionNames() const
     {
         std::vector<std::String> names;
@@ -90,12 +90,12 @@ public:
         {
             names.push_back(kv_first);
         }
-        
+
         return names;
         // {context, 'audioengine', 'convlution'} 같은 목록 반환
         // usage( 에서 목록 출력에 사용
     }
-    
+
     bool RunFunction(const std::string& name)
     {
         if (m_functions.find(name) != m_functions.end())
@@ -108,9 +108,9 @@ public:
         {
             printf("ERROR : No function defined or name : %s\n", name.c_str());
             //등록되지 않은 이름 출력
-        }    
+        }
     }
-    
+
 private:
     std::map<std::String, Function> m_functions;
     //이름/함수 맵핑
@@ -144,30 +144,30 @@ public:
 	static void itest_##name(); \
 	SelfRegisterFunction register_itest_##name(#name, itest_##name) \
 	static_void itest_##name()
-	
+
 // ## : 토큰 붙이기 ITEST(Context) -> itest_context
 // #name : 문자열 반환, ITEST(context) -> "context" 반환
-// 세미콜론 없음 : 매크로 뒤에 {} 본문을 바로 붙힐 수 있음
+// 세미콜론 없음 : 매크로 뒤에 {} 본문을 바로 붙일 수 있음
 
 //eg) ITEST(gui)를 호출하면
 // static void itest_gui();
 // SelfRegisterFunction register_itest_gui("gui", itest_gui);
-// static void itest_gui() 실행 - runFuntion에서 (main)
+// static void itest_gui() 실행 - runFunction에서 (main)
 //
 //전방 선언을 꼭 해줘야 된다 (아니면 컴파일 에러)
 
 //================================================================
 //=====================    itest .cpp   ==========================
 //================================================================
-#include itest.h
+#include "itest.h"
 
 void usage()
 {
     auto names = getFunctionRegistry().getFunctionNames();
-    
+
     printf("USAGE : phonon_itest <name>\n");
-    printf("where <name> is one of : \n);
-    
+    printf("where <name> is one of : \n");
+
     for (const auto& name : names)
     {
         printf("\t%s\n", name.c_str());
@@ -180,20 +180,20 @@ int main(int argc, char** argv)
     if (argc != 2)
     {
 	    //argc = 인자 개수, argv[0] = 실행파일 이름
-	    //phonon_itest.exe contest -> argc = 2, argv[1] = "context"
-	    //phonen_itest.ext         -> args = 1 -> usgae 출력
-	    
+	    //phonon_itest.exe context -> argc = 2, argv[1] = "context"
+	    //phonon_itest.exe         -> argc = 1 -> usage 출력
+
         usage();
         return 0;
     }
-    
+
     if (!getFunctionRegistry().runFunction(argv[1]))
     {
         //argv[1] = "context" -> itest_context() 실행
         //없는 이름이면 false -> usage 출력
         usage();
     }
-    
+
     return 0;
 }
 
@@ -204,7 +204,7 @@ int main(int argc, char** argv)
 # 5. 전체 실행 흐름
 
 > [!info] 전체 실행 흐름
-> 
+>
 > 전역 객체 생성 (main 이전) <br>
 > 1. `SelfRegisteringFunction register_itest_context`
 > 2. `getFunctionRegistry()["context"] = itest_context`

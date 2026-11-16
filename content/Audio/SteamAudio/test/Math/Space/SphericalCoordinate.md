@@ -35,15 +35,13 @@ description: 구면 좌표계 (spherical coordinate system)
 r = sqrt (x^2 + y^2 + z^2)
 ```
 
-<strong style="color:#b3f594">2. azimuth (φ)</strong>
-- 수평 방위각
+<strong style="color:#b3f594">2. azimuth (φ)</strong> - 수평 방위각
 ``` cpp
 φ = atan2(y,x)
 // 정면 0 , 왼쪽 PI/2 , 후방 PI , 오른쪽 3PI/2
 ```
 
-<strong style="color:#b3f594">3. elevation (θ)</strong>
-- 수직 양각
+<strong style="color:#b3f594">3. elevation (θ)</strong> - 수직 양각
 ``` cpp
 θ = atan2(x, sqrt(x^2 + y^2))
 // 수평 = 0, 정수직 위 = PI /2
@@ -80,7 +78,7 @@ Spherical cartesianToSpherical(float x, float y , float z)
 {
 	Spehrical s{};
 	s.r = std::sqrt (x * X + y * y + z * z);
-	
+
 	if (s.r > 1e-6f)
 	{
 		    s.azimuth = std::atn2f(y,x);                      //수평 방위각
@@ -89,16 +87,14 @@ Spherical cartesianToSpherical(float x, float y , float z)
 #inlcude <cmath>
 #include <algorithm>
 
-struct SphericalVector3f
-{
+struct SphericalVector3f {
     float radius;
     float azimuth;
     float elevation
-    
-explicit SphericalVector3f(float x, float y, float z)
-{
+
+explicit SphericalVector3f(float x, float y, float z) {
     radius = std::sqrt(x*x + y*y + z*z);
-    
+
     if (radius > 1e-6f)
     {
         //수평면 투영 후 방위각 계산
@@ -109,18 +105,16 @@ explicit SphericalVector3f(float x, float y, float z)
     {
         azimuth = elevation = 0.0f;
     }
-}
-};
+} };
 
 
-void calcPairwisePanningData(float dirX, float dirY, float dirZ)
-{
+void calcPairwisePanningData(float dirX, float dirY, float dirZ) {
     SphericalVector3f polar (dirX, dirY, dirZ);
-    
+
     //elevation은 무시 - 스피커가 수평면에 있기 때문에
     //azimuth만 꺼내서 스피꺼 한쌍 판별
     float phi = std::max(0.0f, polar.azimuth);
-    
+
     //phi 범위로 인접한 쌍 결정 (5.1 surround 기준)
 	// 0 ~ PI/4           -> front-left / center 사이
 	// PI/4 ~ 3PI/4       -> rear-left / front-left 사이
@@ -140,21 +134,15 @@ void calcPairwisePanningData(float dirX, float dirY, float dirZ)
 
 ---
 
-<font color="#b3f594">1. 역할 분리</font>
-<font color="#b3f594">1. 역할 분리</font>
-<font color="#b3f594">1. 역할 분리</font>
+<font color="#b3f594">1. 역할 분리</font> <font color="#b3f594">1. 역할 분리</font> <font color="#b3f594">1. 역할 분리</font>
 <font color="#b3f594">1. 역할 분리</font>
 
 
 들여쓰기
 
-<details>
-  <summary>여기를 클릭해서 내용을 확인하세요 (제목)</summary>
-  <div markdown="1">
-    
-    이곳에 펼쳐질 내용을 작성합니다.
-    - 리스트도 가능하고
-    - **굵은 글씨**도 가능합니다.
+<details> <summary>여기를 클릭해서 내용을 확인하세요 (제목)</summary> <div markdown="1">
+
+이곳에 펼쳐질 내용을 작성합니다. - 리스트도 가능하고 - **굵은 글씨**도 가능합니다.
 
   </div>
 </details>
@@ -163,23 +151,14 @@ void calcPairwisePanningData(float dirX, float dirY, float dirZ)
 %% 옵시디언에서만 보이는 주석 %%
 
 
-<font color="#2ecc71">초록색 텍스트</font>
-<font color="#3498db">파란색 텍스트</font>
-<font color="#ff4d4d">빨간색 텍스트</font>
-<font color="#ffa500">주황색 텍스트</font>
-<font color="#f1c40f">노란색 텍스트</font>
+<font color="#2ecc71">초록색 텍스트</font> <font color="#3498db">파란색 텍스트</font> <font color="#ff4d4d">빨간색 텍스트</font>
+<font color="#ffa500">주황색 텍스트</font> <font color="#f1c40f">노란색 텍스트</font>
 
-<font color="#b3f594">■ 이미지의 그 초록색 (연두)</font>
-<font color="#80dfff">■ 시원한 밝은 파란색</font>
-<font color="#ff6b6b">■ 예쁜 다홍빛 빨간색</font>
-<font color="#ffb15b">■ 질문하신 주황색</font>
-<font color="#ffff80">■ 눈 안 아픈 부드러운 노란색</font>
+<font color="#b3f594">■ 이미지의 그 초록색 (연두)</font> <font color="#80dfff">■ 시원한 밝은 파란색</font> <font color="#ff6b6b">■ 예쁜 다홍빛
+빨간색</font> <font color="#ffb15b">■ 질문하신 주황색</font> <font color="#ffff80">■ 눈 안 아픈 부드러운 노란색</font>
 
-<strong style="color:#b3f594">연두색 (이미지 속 그 색상)</strong>
-<strong style="color:#80dfff">밝은 하늘색 (정보/참고)</strong>
-<strong style="color:#ff6b6b">다홍색 (주의/경고)</strong>
-<strong style="color:#ffb15b">주황색 (핵심 키워드)</strong>
-<strong style="color:#ffff80">부드러운 노란색 (강조)</strong>
+<strong style="color:#b3f594">연두색 (이미지 속 그 색상)</strong> <strong style="color:#80dfff">밝은 하늘색 (정보/참고)</strong> <strong style="color:#ff6b6b">다홍색
+(주의/경고)</strong> <strong style="color:#ffb15b">주황색 (핵심 키워드)</strong> <strong style="color:#ffff80">부드러운 노란색 (강조)</strong>
 
 # Code Example
 ``` cpp fold title:Cmd
@@ -187,15 +166,11 @@ au.3dVisualize.Listeners 1
 ```
 
 ``` cpp fold title:subject
-int a = 1;
-int b = 2;
-a + b 3;
+int a = 1; int b = 2; a + b 3;
 ```
 
 
-# Callout Example
-> [!info] info
-> Contents
+# Callout Example > [!info] info > Contents
 
 > [!todo] todo
 > Contents

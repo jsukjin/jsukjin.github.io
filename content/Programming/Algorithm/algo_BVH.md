@@ -21,8 +21,10 @@ description: BVH (Bounding volume Hierarchy), Octree 분석
 
 > [!info] 왜 필요한가?
 > 예 : 씬에 삼각형 10만개 있을때 레이를 쏜다면
-> - BVH 없음 -> 10만개 전부 교차 검사 -  `O(n)`
-> - BVH 있음 -> log(10만) = 17번만 검사 - `O(log n)`
+> - BVH 없음 -> 최악의 경우 10만개 전부 교차 검사 - `O(n)`
+> - BVH 있음 -> 공간 분포와 tree 품질에 따라 검사량이 줄어든다. 균형 잡힌 tree의 전형적인 query는 빠르지만, 최악의 경우 `O(log n)`을 보장하지 않는다.
+
+BVH 기초와 Steam Audio에서의 적용 위치는 [[Programming/Algorithm/algo_00_overview|알고리즘 학습 지도]]와 [[Audio/SteamAudio/core/detail/geometry/core_geometry_pipeline|Core Geometry 분석]]에서 이어서 본다.
 
 ---
 ## 1.1 구성요소
@@ -43,8 +45,8 @@ description: BVH (Bounding volume Hierarchy), Octree 분석
 - 삼각형을 감싸는 가장 작은 박스
 
 ``` 
-삼각형 비교 검사 -> 수학적 계산, 복잡 느림
-AABB 교차 검사 -> 범위 비교 6번, 매우 빠름
+삼각형 비교 검사 -> 삼각형 단위 ray intersection 계산
+AABB 교차 검사 -> ray와 box slab interval이 겹치는지 검사
 ```
 
 ### SAH

@@ -12,24 +12,24 @@ description: "third party library build /배포 하는 batch 시스템 (python, 
 ---
 
 ---
-# 1. 구조 
+# 1. 구조
 
 작업에 필요한 third party library를 다운/빌드/배포는 다음과 같은 방식으로 이루어 진다
 
-> [!info] 
+> [!info]
 > 1. GItHub 저장소
 > 2. 내 PC에 다운로드
 > 3. 빌드 (Cmake)
 > 4. 필요한 파일만 골라서 별도의 폴어 (deps)에 정리
 
-* Phonon_itest.exe 를 빌드 할려면 GLFW, IMGui 등이 필요하다 
+* Phonon_itest.exe 를 빌드 할려면 GLFW, IMGui 등이 필요하다
 - 이 라이브러리들은  내 프로젝트에 포함되어 있지 않으니 외부에서 가져와야 한다
 
 ---
 
 # 2. 전체 흐름
 
-> [!info] 
+> [!info]
 > 1. feath  - Github에서 소스코드 다운로드 (git clone)
 > 2. configure - CMake로 visual studio 프로젝트 생성
 > 3. build - Visual Studio로 실제 compile -> .lib 생성
@@ -82,8 +82,7 @@ cmake --install deps-build/portaudio/build/windows-x64 --config Release
 
 # 4. 배포 automation
 
-- 배치파일로는 git clon, cmake 호출 등 복잡한 처리가 불가능하기에 
-  python으로 자동화 작업의 효율을 올리기 위하여 python으로 작업 되었다
+- 배치파일로는 git clon, cmake 호출 등 복잡한 처리가 불가능하기에 python으로 자동화 작업의 효율을 올리기 위하여 python으로 작업 되었다
 
 ## 1. 예제 코드
 

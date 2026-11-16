@@ -65,8 +65,8 @@ loader를 같이 읽는다.
 Host는 SDK serialized object API에서 data pointer와 size를 읽어 자신이 관리하는 
 asset/package에 보관하고, load 시 bytes와 size를 다시 Core에 전달한다. 
 object가 참조하는 buffer lifetime과 API release 시점을 지켜야 한다. 
-Geometry serializer는 [[detail/geometry/core_geometry_pipeline|Geometry/Scene 상세]]를
-baking serializer는 [[detail/probes/core_probes_baking|Probe/Baking 상세]]를 참고한다.
+Geometry serializer는 [[core_geometry_pipeline|Geometry/Scene 상세]]를
+baking serializer는 [[core_probes_baking|Probe/Baking 상세]]를 참고한다.
 
 ---
 
@@ -104,8 +104,8 @@ BlobView viewOf(const std::vector<std::uint8_t>& bytes)
 | `energy_field.fbs` |
 | `material.fbs` |
 | `mesh.fbs` |
-| [path_data.fbs](../pathing/core_path_data.md) |
-| [path_visibility.fbs](../pathing/core_path_visibility.md) |
+| [path_data.fbs](core_path_data.md) |
+| [path_visibility.fbs](core_path_visibility.md) |
 | `probe_batch.fbs` |
 | `reverb.fbs` |
 | `scene.fbs` |

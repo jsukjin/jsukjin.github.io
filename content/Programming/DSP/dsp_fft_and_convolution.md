@@ -40,4 +40,4 @@ void addBlock(float* output, const float* transformedBlock,
 
 # 4. Steam Audio 연결
 
-`convolution.*`, HRTF binaural renderer, reflection IR 처리에서 convolution 및 partitioning을 살펴본다. [[Audio/SteamAudio/core/detail/dsp/core_dsp_modules|Core DSP overview]]와 [[dsp_hrtf_binaural|HRTF 문서]]를 함께 읽는다. GPU backend 사용 여부는 build option에 따라 달라진다.
+`convolution.*`, HRTF binaural renderer, reflection IR 처리에서 convolution 및 partitioning을 살펴본다. [[core_dsp_modules|Core DSP overview]]와 [[dsp_hrtf_binaural|HRTF 문서]]를 함께 읽는다. GPU backend 사용 여부는 build option에 따라 달라진다.

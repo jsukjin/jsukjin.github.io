@@ -102,11 +102,11 @@ Host는 bake 요청에 필요한 설정과 callback, `userData`를 전달한다.
 Core의 `ReflectionBaker::bake`는 이 입력으로 작업을 구성하고,
 진행 상태와 취소 요청을 callback 경계에서 처리한다.
 
-C API 연결은 [Public API 상세](../api/core_public_api.md)와
+C API 연결은 [Public API 상세](core_public_api.md)와
 [Host C API Overview](core_02_host_c_api_overview.md)에서 확인할 수 있다.
 
-Bake 결과는 [BakedReflectionsData 상세](./core_baked_reflection_data.md)에 저장되고,
-런타임 조회는 [BakedReflectionSimulator 상세](./core_baked_reflection_simulator.md)로 이어진다.
+Bake 결과는 [BakedReflectionsData 상세](core_baked_reflection_data.md)에 저장되고,
+런타임 조회는 [BakedReflectionSimulator 상세](core_baked_reflection_simulator.md)로 이어진다.
 
 # 5. 독립 C++ 핵심 예제
 

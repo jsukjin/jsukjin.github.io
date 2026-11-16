@@ -25,7 +25,7 @@ Core Pathing은 **<strong style="color:#b3f594">Probe</strong> Batch와 미리 �
 
 - 상위 안내- [[core_00_overview|Core Overview]] · 
 - Simulation내 위치- [[core_03_simulation_overview|Simulation Overview]] 
-- 경로 탐색 알고리즘 상세 - [[detail/pathing/core_path_finder|PathFinder]]
+- 경로 탐색 알고리즘 상세 - [[core_path_finder|PathFinder]]
 
 ---
 
@@ -102,13 +102,13 @@ Probe spacing은 세밀할수록 공간 변화를 더 잘 포착할 수 있지�
 장면의 구조와 경로 품질 예산에 맞춰 설정한다.
 
 Probe 위치 생성의 실제 centroid/grid/raycast
-- [[detail/probes/core_probe_generator|ProbeGenerator 분석]]
+- [[core_probe_generator|ProbeGenerator 분석]]
 
 batch와 serialization
-- [[detail/probes/core_probe_batch|ProbeBatch 분석]], 
+- [[core_probe_batch|ProbeBatch 분석]], 
 
 다중 batch neighborhood와 가중치
-- [[detail/probes/core_probe_manager|ProbeManager 분석]]
+- [[core_probe_manager|ProbeManager 분석]]
 
 주요 파일: probe.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/probe.h), probe_data.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/probe_data.h), 
 `probe_batch.*`, `probe_generator.*`, `probe_manager.*`, `probe_tree.*`, `octree_probes.*`.
@@ -122,13 +122,13 @@ batch와 serialization
 Bake는 probe 쌍 사이의 visibility/path 관련 정보를 저장한다. 
 
 <strong style="color:#b3f594">visibility graph</strong>
-- [[detail/pathing/core_path_visibility|ProbeVisibilityGraph 분석]],
+- [[core_path_visibility|ProbeVisibilityGraph 분석]],
 
 <strong style="color:#b3f594">probe pair shortest route와 compact serialized representation</strong>
--  [[detail/pathing/core_path_data|PathData / BakedPathData 분석]]
+-  [[core_path_data|PathData / BakedPathData 분석]]
 
 <strong style="color:#b3f594">Probe grid 생성과 batch 등록</strong>
-- [[detail/probes/core_probe_generator|ProbeGenerator]]와 [[detail/probes/core_probe_batch|ProbeBatch]]
+- [[core_probe_generator|ProbeGenerator]]와 [[core_probe_batch|ProbeBatch]]
 
 
 이후 runtime search가 매번 모든 공간 관계를 새로 평가하지 않도록 정적인 
@@ -147,12 +147,12 @@ Scene + ProbeBatch
 
 Runtime은 현재 source/listener 위치를 probe neighborhood에 연결하고, 
 후보 probe 경로 중 사용할 경로를 찾는다. 
-전체 orchestration은 [[detail/pathing/core_path_simulator|PathSimulator 코드분석]] 
-개별 graph search는 [[detail/pathing/core_path_finder|PathFinder 알고리즘과 코드 분석]]에서 확인한다. 
+전체 orchestration은 [[core_path_simulator|PathSimulator 코드분석]] 
+개별 graph search는 [[core_path_finder|PathFinder 알고리즘과 코드 분석]]에서 확인한다. 
 Source/listener가 움직이면 neighborhood와 선택 경로가 달라질 수 있다.
 
 ProbeManager가 여러 batch의 후보를 합치고 <strong style="color:#b3f594">occlusion</strong>/weight를 처리하는 실제 코드는
-[[detail/probes/core_probe_manager|ProbeManager와 ProbeNeighborhood]]를 참고한다.
+[[core_probe_manager|ProbeManager와 ProbeNeighborhood]]를 참고한다.
 
 ```text
 current source/listener transforms
@@ -184,11 +184,11 @@ runtime에서는 현재 source/listener와 관련된 목표 경로를 효율적�
 
 `path_finder.*`에는 탐색 목적에 맞춘 Dijkstra/A* 계열 동작이 존재한다. 
 실제 priority queue, 비용/부모 scratch 및 path reconstruction은 
-[[detail/pathing/core_path_finder|PathFinder구현 분석]]에서 함수 단위로 따라간다. 
+[[core_path_finder|PathFinder구현 분석]]에서 함수 단위로 따라간다. 
 차이는 단순히 “둘 중 더 빠른 알고리즘”이 아니라, 계산을 언제 수행하고 얼마만큼의 
 사전 정보를 활용하는가와 연관된다.
 
-알고리즘과 구현 단계별 설명은 [[detail/pathing/core_path_finder|PathFinder 분석]]을 참고한다.
+알고리즘과 구현 단계별 설명은 [[core_path_finder|PathFinder 분석]]을 참고한다.
 
 ---
 
@@ -224,13 +224,13 @@ Path Simulator는 선택한 probe segments와 source/listener의 위치를 바�
 음향 특성을 계산한다. 
 
 계산 모듈
-- [[detail/pathing/core_path_simulator|PathSimulator]]
+- [[core_path_simulator|PathSimulator]]
 
 bend angle 모델
-- [[detail/pathing/core_deviation_model|DeviationModel]],
+- [[core_deviation_model|DeviationModel]],
 
 결과 구조
-- [[detail/pathing/core_path_data|SoundPath]]
+- [[core_path_data|SoundPath]]
 
 경로 효과에는 다음 종류의 값이 중요하다.
 - source에서 첫 probe, probe 사이 segment, 마지막 probe에서 listener까지의 거리/감쇠
@@ -242,7 +242,7 @@ bend angle 모델
 직접음은 대개 source-listener 단일 path를 대상으로 하고, 
 Pathing은 여러 probe segment로 구성된 후보 경로들을 다룬다. 
 따라서 `DirectEffect`와 `PathEffect`는 결과 구조와 처리 방식이 다르다. 
-PCM 적용 단계는 [[detail/pathing/core_path_effect|PathEffect 코드 분석]]에서 볼 수 있다.
+PCM 적용 단계는 [[core_path_effect|PathEffect 코드 분석]]에서 볼 수 있다.
 
 ---
 

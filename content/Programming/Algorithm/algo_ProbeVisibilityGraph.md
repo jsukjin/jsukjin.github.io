@@ -33,10 +33,10 @@ flowchart LR
 
 # 4. Core 문서 경로
 
-- graph construction과 ray sample visibility: [[Audio/SteamAudio/core/detail/pathing/core_path_visibility|PathVisibility 구현]]
-- 경로 search: [[Audio/SteamAudio/core/detail/pathing/core_path_finder|PathFinder 구현]]
-- 경로 object 및 schema: [[Audio/SteamAudio/core/detail/pathing/core_path_data|PathData 구현]]
-- runtime orchestration과 acoustic result: [[Audio/SteamAudio/core/detail/pathing/core_path_simulator|PathSimulator 구현]]
-- effect: [[Audio/SteamAudio/core/detail/pathing/core_path_effect|PathEffect 구현]]
+- graph construction과 ray sample visibility: [[core_path_visibility|PathVisibility 구현]]
+- 경로 search: [[core_path_finder|PathFinder 구현]]
+- 경로 object 및 schema: [[core_path_data|PathData 구현]]
+- runtime orchestration과 acoustic result: [[core_path_simulator|PathSimulator 구현]]
+- effect: [[core_path_effect|PathEffect 구현]]
 
 전반적인 절차는 [[core_06_pathing_overview|Core Pathing Overview]]에 있다. 공부 순서는 graph visibility → shortest path → path data → simulator → audio effect다.

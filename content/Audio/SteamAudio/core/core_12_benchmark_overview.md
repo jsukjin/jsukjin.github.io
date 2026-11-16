@@ -279,7 +279,7 @@ Windows CPU affinity helper와 선택적인 Tracy hook도 `phonon_perf.cpp`의
 실행 경로에서 확인할 수 있다.
 
 각 `.cpp` 파일에서 setup, 타이머 범위, 반복 작업, 출력 수치를 대응해 읽으려면
-[[detail/benchmark/core_benchmark_source_analysis|Benchmark 전체 소스 분석]]을 참고한다.
+[[core_benchmark_source_analysis|Benchmark 전체 소스 분석]]을 참고한다.
 그 문서는 21개 workload와 harness/build 파일 4개의 구현을 각각 설명한다.
 
 ---

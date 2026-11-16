@@ -16,9 +16,9 @@ path_data.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/co
 최소 정보로 압축한 `SoundPath`와 probe pair lookup을 보관하는 `BakedPathData`가 있다.
 
 - Pathing 전체 흐름: [[core_06_pathing_overview|Pathing Overview]]
-- 탐색 결과를 만드는 쪽: [[detail/pathing/core_path_finder|PathFinder 상세 분석]]
-- baked graph schema: [[detail/pathing/core_path_visibility|ProbeVisibilityGraph 상세 분석]]
-- FlatBuffers 공통 구조: [[detail/serialization/core_serialization_formats|Serialization 상세 분석]]
+- 탐색 결과를 만드는 쪽: [[core_path_finder|PathFinder 상세 분석]]
+- baked graph schema: [[core_path_visibility|ProbeVisibilityGraph 상세 분석]]
+- FlatBuffers 공통 구조: [[core_serialization_formats|Serialization 상세 분석]]
 
 ---
 # 2. 자료 구조
@@ -103,7 +103,7 @@ Loading 시에도 이 sparse reference를 2D table에 복원한다.
 
 SDK에서 직접 `SoundPath`를 만들지는 않는다. `iplPathBakerBake`가 path bake를 생성하고,
 ProbeBatch의 baked path data가 `PathSimulator`에서 조회된다. 
-Probe/scene baking 및 API 연결은 [[detail/probes/core_probes_baking|Probe와 Baking 상세]]에서 이어서 본다. 
+Probe/scene baking 및 API 연결은 [[core_probes_baking|Probe와 Baking 상세]]에서 이어서 본다. 
 Scene/probe 구성이 바뀐 뒤에는 baked data의 identifier와 업데이트 필요 상태를 맞춰야 한다.
 
 ---

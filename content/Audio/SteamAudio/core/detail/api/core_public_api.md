@@ -109,9 +109,9 @@ ContextHandle createContext()
 조건부 backend wrapper도 포함한다.
 
 > [!info] 파일별 전체 코드와 주석
-> API 계약과 Context/Scene/Simulator 구현은 [계약·공통 wrapper 분석](./core_public_api_contract_sources.md)에서 확인한다.
-> Effect 구현은 [Effect wrapper 분석](./core_public_api_effect_sources.md),
-> backend와 data wrapper는 [Backend·data wrapper 분석](./core_public_api_data_sources.md)을 참고한다.
+> API 계약과 Context/Scene/Simulator 구현은 [계약·공통 wrapper 분석](core_public_api_contract_sources.md)에서 확인한다.
+> Effect 구현은 [Effect wrapper 분석](core_public_api_effect_sources.md),
+> backend와 data wrapper는 [Backend·data wrapper 분석](core_public_api_data_sources.md)을 참고한다.
 
 ### <strong style="color:#b3f594">Public ABI와 공통 문서</strong>
 
@@ -146,8 +146,8 @@ ContextHandle createContext()
 - api_direct_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_direct_effect.cpp)
 - api_indirect_effect.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_indirect_effect.h)
 - api_indirect_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_indirect_effect.cpp)
-- api_path_effect.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_path_effect.h) · [PathEffect 상세 분석](../pathing/core_path_effect.md)
-- api_path_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_path_effect.cpp) · [PathEffect 상세 분석](../pathing/core_path_effect.md)
+- api_path_effect.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_path_effect.h) · [PathEffect 상세 분석](core_path_effect.md)
+- api_path_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_path_effect.cpp) · [PathEffect 상세 분석](core_path_effect.md)
 - api_panning_effect.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_panning_effect.h)
 - api_panning_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_panning_effect.cpp)
 - api_binaural_effect.h [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_binaural_effect.h)
@@ -202,9 +202,9 @@ API 경계를 따라가려면 선언, forwarding 구현, build 연결 순서로 
 
 파일별 실제 코드와 주석은 다음 문서에서 확인한다.
 
-- [계약·공통 wrapper 분석](./core_public_api_contract_sources.md)
-- [Effect wrapper 분석](./core_public_api_effect_sources.md)
-- [Backend·data wrapper 분석](./core_public_api_data_sources.md)
+- [계약·공통 wrapper 분석](core_public_api_contract_sources.md)
+- [Effect wrapper 분석](core_public_api_effect_sources.md)
+- [Backend·data wrapper 분석](core_public_api_data_sources.md)
 
 ---
 

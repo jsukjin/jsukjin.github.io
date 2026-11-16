@@ -92,7 +92,7 @@ target source inclusion은  각 CMake/headers에 따라 다르다.
 조건부 backend 파일도 포함한다.
 
 > [!info] Metadata 파일 전체 원본
-> `phonon.natvis`, `phonon.rc.in`, `phonon_version.h.in` 전체는 [Build metadata source](./core_build_metadata_sources.md)에서 파일별 설명과 함께 확인한다.
+> `phonon.natvis`, `phonon.rc.in`, `phonon_version.h.in` 전체는 [Build metadata source](core_build_metadata_sources.md)에서 파일별 설명과 함께 확인한다.
 
 | 파일               |
 | ---------------- |

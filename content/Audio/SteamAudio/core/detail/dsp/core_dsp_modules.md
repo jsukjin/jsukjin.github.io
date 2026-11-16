@@ -64,7 +64,7 @@ for (auto i = 0; i < mNumChannels; ++i)
 ```
 
 Apply flag와 transmission mode가 주파수 의존 EQ 여부를 결정하고, 이후 gain이 적용된다.
-세부 parameter와 실행 예는 [[detail/dsp/core_direct_effect|DirectEffect]], [[detail/dsp/core_eqeffect|EQEffect]], [[detail/dsp/core_delay_effect|DelayEffect]]에서 확인한다.
+세부 parameter와 실행 예는 [[core_direct_effect|DirectEffect]], [[core_eqeffect|EQEffect]], [[core_delay_effect|DelayEffect]]에서 확인한다.
 
 ---
 # 4. 사용법
@@ -72,7 +72,7 @@ Apply flag와 transmission mode가 주파수 의존 EQ 여부를 결정하고, �
 SDK 사용자는 simulation output을 effect parameter에 복사하고, audio callback의 
 block buffer를 effect에 전달한다. Buffer channel 수, frame size, sample rate는 effect 생성 시
 audio settings와 일치시킨다.
-HRTF/ambisonics renderer는 [[detail/spatialization/core_spatial_rendering|Spatial Rendering 상세]]를 참고한다.
+HRTF/ambisonics renderer는 [[core_spatial_rendering|Spatial Rendering 상세]]를 참고한다.
 
 ---
 # 5. 독립 C++ 예제

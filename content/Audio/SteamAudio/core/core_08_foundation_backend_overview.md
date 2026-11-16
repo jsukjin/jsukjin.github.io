@@ -61,7 +61,7 @@ geometry query의 기반이다.
 좌표 규약이 API boundary와 내부 math에서 일관되지 않으면 
 geometry intersection과 source/listener 방향이 어긋난다. 
 Dependency가 실제 build에 포함되는 조건은 [[core_10_dependencies_overview|Dependencies Overview]]에서 확인한다. 
-상세: [[detail/system/core_matrix|Matrix/좌표 변환]], [[detail/geometry/core_scene|Scene]], [[detail/geometry/core_bvh|BVH]]
+상세: [[core_matrix|Matrix/좌표 변환]], [[core_scene|Scene]], [[core_bvh|BVH]]
 
 ---
 
@@ -134,7 +134,7 @@ Context는 startup 설정/CPU capability에 따라 사용할 수 있는 SIMD 수
 자동 선택할 수 있다. 모든 알고리즘이 SIMD로 구현되는 것은 아니며, vectorizable loops와
 DSP/math kernel에서 이점이 크다.
 
-상세 분석: [[detail/system/core_simd|SIMD 구조]]
+상세 분석: [[core_simd|SIMD 구조]]
 
 ---
 

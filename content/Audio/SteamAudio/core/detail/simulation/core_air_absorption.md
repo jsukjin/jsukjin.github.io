@@ -30,7 +30,7 @@ Air Absorption은 <strong style="color:#b3f594">거리 감쇠</strong>(<strong s
 Steam Audio Core의 `AirAbsorptionModel`은 계수나 사용자 콜백을 이용해 
 이 대역별 gain을 계산한다. 그 값은 직접음 시뮬레이션 결과에 들어가고,  
 `DirectEffect`의 EQ 처리에서 오디오 신호에 적용된다.
-[[detail/simulation/core_direct_simulation_modules|Direct Simulation overview]]에서 결과 생성 흐름을, [[detail/dsp/core_direct_effect|DirectEffect]]에서 오디오 적용
+[[core_direct_simulation_modules|Direct Simulation overview]]에서 결과 생성 흐름을, [[core_direct_effect|DirectEffect]]에서 오디오 적용
 흐름을 이어서 볼 수 있다.
 
 ---
@@ -124,7 +124,7 @@ flowchart TD
 
 직접음 시뮬레이션에서도 같은 내부 모델의 `evaluate`가 사용된다. 
 `DirectSimulator`가 경로의 대역별 값을 계산하고,
-[[detail/dsp/core_direct_effect|DirectEffect]]가 `ApplyAirAbsorption` 플래그에 따라 EQ 계수로 사용한다.
+[[core_direct_effect|DirectEffect]]가 `ApplyAirAbsorption` 플래그에 따라 EQ 계수로 사용한다.
 
 ---
 
@@ -441,7 +441,7 @@ float customAirAbsorption(float distanceMeters, int band, const float* coefficie
 - 지수 모델은 `exp(-coefficient[band] × distance)`로 대역별 선형 gain을 만든다.
 - 계산 결과는 감쇠량이 아니라 **남는 gain**이다. `1`은 통과, `0`은 완전 감쇠다.
 - Core 구현은 `AirAbsorptionModel::evaluate`에 계산을 모으고, 공개 API가 모델 변환·거리 계산·대역 반복을 맡는다.
-- 직접음 효과에서는 이 대역별 결과가 EQ 처리에 사용된다. 자세한 적용 단계는 [[detail/dsp/core_direct_effect|DirectEffect]]를 참고한다.
+- 직접음 효과에서는 이 대역별 결과가 EQ 처리에 사용된다. 자세한 적용 단계는 [[core_direct_effect|DirectEffect]]를 참고한다.
 
 ---
 

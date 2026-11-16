@@ -98,7 +98,7 @@ DirectEffect::apply
       └─ per-sample/per-channel processing
 ```
 
-개별 상세: [[detail/dsp/core_direct_effect|DirectEffect]], [[detail/dsp/core_eqeffect|EQEffect]], [[detail/simulation/core_air_absorption|Air Absorption]]
+개별 상세: [[core_direct_effect|DirectEffect]], [[core_eqeffect|EQEffect]], [[core_air_absorption|Air Absorption]]
 
 ---
 
@@ -147,7 +147,7 @@ PathSimulator output
        path contributions combined
 ```
 
-경로를 어떻게 찾는지는 [[core_06_pathing_overview|Pathing Overview]]와 [[detail/pathing/core_path_finder|PathFinder]]를 참고한다.
+경로를 어떻게 찾는지는 [[core_06_pathing_overview|Pathing Overview]]와 [[core_path_finder|PathFinder]]를 참고한다.
 
 ---
 
@@ -163,7 +163,7 @@ Spatial rendering은 방향 표현과 출력 기기 사이의 연결을 맡는�
 
 Panning은 source 방향을 speaker 방향과 비교해 각 채널의 gain을 계산한다. 
 Stereo나 surround speaker set에서 방향 인상을 채널별 level 분배로 만든다. 
-[[detail/dsp/core_panning_effect|PanningEffect 상세]]
+[[core_panning_effect|PanningEffect 상세]]
 
 ## 6.2 Binaural/<strong style="color:#b3f594">HRTF</strong>
 
@@ -206,7 +206,7 @@ Buffer allocation을 Core helper로 할지 Host가 직접 할지에 따라 메�
 
 
 문서
-- [[detail/dsp/core_audiobuffer|AudioBuffer]] 
+- [[core_audiobuffer|AudioBuffer]] 
 - API 호출 예시: [[core_02_host_c_api_overview#5. 시뮬레이션 결과를 Effect와 오디오
 
 

@@ -241,7 +241,7 @@ const auto status = iplContextCreate(&settings, &context);
 
 `allocateAligned`와 `freeAligned`는 5번 예제처럼 같은 allocator 계열을 사용해야 한다.
 Context가 소유한 다른 Steam Audio 객체를 먼저 해제한 뒤 Context를 release한다.
-공개 설정과 함수 계약은 [Public API 상세](../api/core_public_api.md),
+공개 설정과 함수 계약은 [Public API 상세](core_public_api.md),
 호스트 연결 흐름은 [Host C API Overview](core_02_host_c_api_overview.md)를 참고한다.
 
 ---

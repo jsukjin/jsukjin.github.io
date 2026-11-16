@@ -15,9 +15,9 @@ description: "PathSimulator가 만든 SH/EQ parameter를 speaker 또는 binaural
 dry mono audio에 적용해 speaker channel, binaural headphone, 또는 non-spatialized 
 SH output으로 만든다.
 
-- Path result 생산: [[detail/pathing/core_path_simulator|PathSimulator 상세 분석]]
+- Path result 생산: [[core_path_simulator|PathSimulator 상세 분석]]
 - <strong style="color:#b3f594">effect</strong> 전반: [[core_04_effect_overview|Effect & Rendering Overview]]
-- C API wrapper: [[detail/api/core_public_api|Public C API 분석]]
+- C API wrapper: [[core_public_api|Public C API 분석]]
 
 ---
 
@@ -79,7 +79,7 @@ Binaural일 때는 SH coefficient에 대응하는 HRTF spectrum을 합성하고
 Speaker mode는 Ambisonics panning으로 speaker gain을 얻고 channel별 `GainEffect`를 
 사용한다. Tail은 직전 block이 binaural convolution 경로였을 때만 convolution tail을 전달한다.
 공개 API `iplPathEffectCreate/Apply/GetTail`은 api_path_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_path_effect.cpp)에서 
-내부 `PathEffect`로 이어진다. 전체 module 분류는 [[detail/dsp/core_dsp_modules|DSP module guide]]에도 있다.
+내부 `PathEffect`로 이어진다. 전체 module 분류는 [[core_dsp_modules|DSP module guide]]에도 있다.
 
 
 <strong style="color:#b3f594">path_effect.h</strong>

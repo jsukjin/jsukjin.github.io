@@ -19,8 +19,8 @@ Direct simulation은 다음과 같은 계산을 한다
 결과는 per-source simulation state에 기록되고 이후 DirectEffect가 audio sample에 적용한다.
 
 - 전체 simulation 위치: [[core_03_simulation_overview|Simulation Overview]]
-- 거리·공기 모델: [[detail/simulation/core_air_absorption|Air Absorption 상세 분석]]과 해당 문서의 거리 attenuation 개념
-- 결과 적용: [[detail/dsp/core_direct_effect|DirectEffect 상세 분석]]
+- 거리·공기 모델: [[core_air_absorption|Air Absorption 상세 분석]]과 해당 문서의 거리 attenuation 개념
+- 결과 적용: [[core_direct_effect|DirectEffect 상세 분석]]
 
 ---
 # 2. 개념과 데이터 흐름

@@ -213,7 +213,7 @@ C ABI는 C++ ABI보다 compiler와 언어 경계를 넘기 쉽다.
 
 Public API의 `IPL*` 구조체와 내부 `ipl::*` 타입 사이에서 변환이 발생한다.
 
-- `IPLMatrix4x4`는 row-major, 내부 `Matrix4x4f`는 column-major라 API boundary에서 transpose한다. 자세한 내용은 [[detail/system/core_matrix]] 참고.
+- `IPLMatrix4x4`는 row-major, 내부 `Matrix4x4f`는 column-major라 API boundary에서 transpose한다. 자세한 내용은 [[core_matrix]] 참고.
 - Validation layer는 항상 본 구현과 같은 의미를 가져야 하므로 API를 추가할 때 같이 갱신해야 한다.
 - 대부분의 객체는 `Context`를 통해 만들어진다. allocator, logger, <strong style="color:#b3f594">SIMD</strong> 정책과 객체 수명 기반을 한곳에서 공유하기 위함이다.
 
@@ -271,7 +271,7 @@ Public API의 `IPL*` 구조체와 내부 `ipl::*` 타입 사이에서 변환이 
 게임 엔진은 자체 allocator, logger, profiler를 사용하는 경우가 많다. Core가 OS 함수나 `new/delete`에 직접
 묶이면 integration과 메모리 추적이 어려워지므로 callback과 공통 wrapper를 둔다.
 
-기존 문서: [[detail/system/core_memory_allocator]], [[detail/system/core_util]]
+기존 문서: [[core_memory_allocator]], [[core_util]]
 
 ## 5.2 Container와 데이터 교환
 
@@ -292,7 +292,7 @@ Public API의 `IPL*` 구조체와 내부 `ipl::*` 타입 사이에서 변환이 
 - FlatBuffers는 Scene, Probe, Baked Data를 pointer가 없는 binary representation으로 저장한다. 다른 실행 시점에 다시 읽어야 하므로 runtime 객체와
     <strong style="color:#b3f594">serialization</strong> 객체가 분리되어 있다.
 
-기존 문서: [[detail/system/core_Array]]
+기존 문서: [[core_Array]]
 
 ## 5.3 Math와 공간 표현
 
@@ -339,7 +339,7 @@ Public API의 `IPL*` 구조체와 내부 `ipl::*` 타입 사이에서 변환이 
     <strong style="color:#b3f594">HRTF</strong>, <strong style="color:#b3f594">Ambisonics</strong> 회전에서 기준축이 일치해야 하기 때문이다.
 - compile option에 따라 SSE/AVX/NEON 구현이 달라지므로 특정 파일이 모든 platform에서 빌드되는 것은 아니다.
 
-기존 문서: [[detail/system/core_matrix]], [[detail/system/core_simd]]
+기존 문서: [[core_matrix]], [[core_simd]]
 
 ## 5.4 Job system
 
@@ -436,11 +436,11 @@ sub-scene local space에 보낸 뒤 hit를 다시 world space로 돌린다.
 
 자세한 내용
 
-- [[detail/geometry/core_mesh]]
-- [[detail/geometry/core_bvh]]
-- [[detail/geometry/core_scene]]
-- [[detail/geometry/core_instanced_mesh]]
-- [[detail/system/core_matrix]]
+- [[core_mesh]]
+- [[core_bvh]]
+- [[core_scene]]
+- [[core_instanced_mesh]]
+- [[core_matrix]]
 
 ## 6.4 더 공부할 곳
 
@@ -512,9 +512,9 @@ pipeline을 함께 봐야 한다.
 
 기존 문서
 
-- [[detail/dsp/core_direct_effect]]
-- [[detail/dsp/core_eqeffect]]
-- [[detail/dsp/core_delay_effect]]
+- [[core_direct_effect]]
+- [[core_eqeffect]]
+- [[core_delay_effect]]
 
 ## 7.4 더 공부할 곳
 
@@ -762,7 +762,7 @@ flowchart TB
     model을 이용한 실용적 근사다.
 - 출력에는 단순 gain뿐 아니라 도착 방향과 SH coefficient가 포함된다. 소리가 실제 source 방향이 아니라 문이나 코너 방향에서 들리게 해야 하기 때문이다.
 
-기존 문서: [[detail/pathing/core_path_finder]]
+기존 문서: [[core_path_finder]]
 
 ## 10.4 더 공부할 곳
 
@@ -821,7 +821,7 @@ Panning은 speaker gain을 계산하는 반면 Binaural은 귀별 HRTF convoluti
 - `VirtualSurroundEffect`는 각 virtual speaker를 개별 binaural source처럼 처리한 뒤 stereo로 합친다.
 - HRTF 교체나 방향 변화 시 filter가 급변하면 click이 날 수 있어 convolution state와 interpolation/crossfade가 중요하다.
 
-기존 문서: [[detail/dsp/core_audiobuffer]], [[detail/dsp/core_panning_effect]]
+기존 문서: [[core_audiobuffer]], [[core_panning_effect]]
 
 ## 11.3 Ambisonics
 
@@ -1082,20 +1082,20 @@ Benchmark
 
 목표: Scene ray query 결과가 audio gain/EQ가 되는 가장 짧은 end-to-end 경로 이해.
 
-1. [[detail/geometry/core_mesh]]
-2. [[detail/geometry/core_bvh]]
-3. [[detail/geometry/core_scene]]
-4. [[detail/geometry/core_instanced_mesh]]
+1. [[core_mesh]]
+2. [[core_bvh]]
+3. [[core_scene]]
+4. [[core_instanced_mesh]]
 5. direct_simulator.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/direct_simulator.cpp)
-6. [[detail/dsp/core_direct_effect]]
+6. [[core_direct_effect]]
 
 
 ## 단계 3: Audio rendering
 
 목표: 위치와 방향이 speaker/headphone sample로 바뀌는 과정 이해.
 
-1. [[detail/dsp/core_audiobuffer]]
-2. [[detail/dsp/core_panning_effect]]
+1. [[core_audiobuffer]]
+2. [[core_panning_effect]]
 3. hrtf_map.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/hrtf_map.cpp), hrtf_database.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/hrtf_database.cpp)
 4. binaural_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/binaural_effect.cpp)
 5. `ambisonics_*_effect.cpp`
@@ -1121,7 +1121,7 @@ Benchmark
 1. probe_generator.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/probe_generator.cpp), probe_tree.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/probe_tree.cpp), probe_batch.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/probe_batch.cpp)
 2. reflection_baker.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/reflection_baker.cpp), baked_reflection_simulator.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/baked_reflection_simulator.cpp)
 3. path_visibility.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/path_visibility.cpp)
-4. [[detail/pathing/core_path_finder]]
+4. [[core_path_finder]]
 5. path_simulator.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/path_simulator.cpp), path_effect.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/path_effect.cpp)
 
 
@@ -1129,7 +1129,7 @@ Benchmark
 
 목표: 동일한 기능이 platform과 device에 따라 어떻게 교체되는지 이해.
 
-1. [[detail/system/core_simd]]
+1. [[core_simd]]
 2. job_graph.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/job_graph.cpp), thread_pool.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/thread_pool.cpp)
 3. scene_factory.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/scene_factory.cpp), reflection_simulator_factory.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/reflection_simulator_factory.cpp)
 4. Embree/Radeon Rays/OpenCL/TAN 구현 비교

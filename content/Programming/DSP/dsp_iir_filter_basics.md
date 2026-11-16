@@ -49,8 +49,8 @@ struct OnePoleLowPass
 
 대역별 gain은 각 주파수 구간의 성분을 따로 조절하는 개념이다. 실제 구현은 crossover/filter bank 또는 변환 도메인 처리로 대역을 분리한 뒤 각 band gain을 적용한다. 특정 대역 gain을 곱하는 것으로 모든 주파수를 독립적으로 정확히 나눌 수 있는 것은 아니므로 crossover 구현을 확인해야 한다.
 
-Air absorption은 거리와 공기 특성에 따라 고주파 성분이 상대적으로 더 줄어드는 현상을 근사한다. Core의 결과 계수 계산은 [[Audio/SteamAudio/core/detail/simulation/core_air_absorption|Air Absorption 분석]], 별도 path EQ 적용은 [[Audio/SteamAudio/core/detail/pathing/core_path_effect|PathEffect 분석]]에 있다.
+Air absorption은 거리와 공기 특성에 따라 고주파 성분이 상대적으로 더 줄어드는 현상을 근사한다. Core의 결과 계수 계산은 [[core_air_absorption|Air Absorption 분석]], 별도 path EQ 적용은 [[core_path_effect|PathEffect 분석]]에 있다.
 
 # 5. 공부 순서
 
-먼저 buffer layout을 [[dsp_audio_buffer_and_block_processing|Audio Buffer 문서]]에서 익힌다. 이후 [[Audio/SteamAudio/core/detail/dsp/core_dsp_modules|Core DSP modules]]에서 filter 계수 생성과 block processing 호출 위치를 찾아본다.
+먼저 buffer layout을 [[dsp_audio_buffer_and_block_processing|Audio Buffer 문서]]에서 익힌다. 이후 [[core_dsp_modules|Core DSP modules]]에서 filter 계수 생성과 block processing 호출 위치를 찾아본다.

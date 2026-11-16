@@ -50,4 +50,4 @@ void fir(const float* input, const float* impulse,
 
 # 5. Core 코드 연결
 
-[[Audio/SteamAudio/core/detail/spatialization/core_spatial_rendering|Spatial rendering 분석]]에서 HRTF object, binaural effect, HRTF interpolation 및 출력 buffer를 추적한다. Mono object rendering과 Ambisonics binaural decoding은 입력 표현이 다르므로 [[dsp_spherical_harmonics_spatial_audio|Ambisonics 문서]]도 이어서 본다.
+[[core_spatial_rendering|Spatial rendering 분석]]에서 HRTF object, binaural effect, HRTF interpolation 및 출력 buffer를 추적한다. Mono object rendering과 Ambisonics binaural decoding은 입력 표현이 다르므로 [[dsp_spherical_harmonics_spatial_audio|Ambisonics 문서]]도 이어서 본다.

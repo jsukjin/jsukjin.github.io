@@ -40,4 +40,4 @@ int full3DShCoefficientCount(int order)
 
 # 4. Steam Audio 연결
 
-`ambisonics_rotation.*`, `ambisonics_binaural_effect.*`, `ambisonics_panning_effect.*`에서 계수 차원, rotation, decoder를 구분해서 읽는다. [[Audio/SteamAudio/core/detail/spatialization/core_spatial_rendering|Spatial rendering source guide]]를 참고하고, 바이노럴 decoding은 [[dsp_hrtf_binaural|HRTF 문서]]로 이어간다.
+`ambisonics_rotation.*`, `ambisonics_binaural_effect.*`, `ambisonics_panning_effect.*`에서 계수 차원, rotation, decoder를 구분해서 읽는다. [[core_spatial_rendering|Spatial rendering source guide]]를 참고하고, 바이노럴 decoding은 [[dsp_hrtf_binaural|HRTF 문서]]로 이어간다.

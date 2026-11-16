@@ -24,7 +24,7 @@ description: BVH (Bounding volume Hierarchy), Octree 분석
 > - BVH 없음 -> 최악의 경우 10만개 전부 교차 검사 - `O(n)`
 > - BVH 있음 -> 공간 분포와 tree 품질에 따라 검사량이 줄어든다. 균형 잡힌 tree의 전형적인 query는 빠르지만, 최악의 경우 `O(log n)`을 보장하지 않는다.
 
-BVH 기초와 Steam Audio에서의 적용 위치는 [[Programming/Algorithm/algo_00_overview|알고리즘 학습 지도]]와 [[Audio/SteamAudio/core/detail/geometry/core_geometry_pipeline|Core Geometry 분석]]에서 이어서 본다.
+BVH 기초와 Steam Audio에서의 적용 위치는 [[Programming/Algorithm/algo_00_overview|알고리즘 학습 지도]]와 [[core_geometry_pipeline|Core Geometry 분석]]에서 이어서 본다.
 
 ---
 ## 1.1 구성요소

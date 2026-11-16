@@ -211,7 +211,7 @@ iplStaticMeshCreate → iplStaticMeshAdd → iplSceneCommit
 
 `iplSceneCreate` 자체는 geometry를 담지 않는다. Scene 안에서 static mesh/instance를 생성하고 추가한 다음
 `iplSceneCommit`으로 변경을 확정해야 query에서 사용된다. 자세한 geometry 계층은
-[[core_07_scene_geometry_overview|Scene & Geometry Overview]]와 [[detail/geometry/core_scene|Scene 분석]]에서 다룬다.
+[[core_07_scene_geometry_overview|Scene & Geometry Overview]]와 [[core_scene|Scene 분석]]에서 다룬다.
 
 시뮬레이터에는 Scene을 연결하고, 처리할 Source를 등록한다. 아래 코드는 simulator가 이미 생성되었다고 가정한 연결 단계다.
 
@@ -415,7 +415,7 @@ AudioBuffer sample 메모리의 소유자는 기본적으로 Host다. Host가 �
 <strong style="color:#b3f594">Interleaved</strong> layout을 사용하면 API의 interleave/deinterleave helper나 Host 변환 코드를
 사용해야 한다.
 
-관련 상세 문서: [[detail/dsp/core_audiobuffer|AudioBuffer]], [[core_04_effect_overview|Effect & Rendering Overview]], [[detail/dsp/core_direct_effect|DirectEffect]]
+관련 상세 문서: [[core_audiobuffer|AudioBuffer]], [[core_04_effect_overview|Effect & Rendering Overview]], [[core_direct_effect|DirectEffect]]
 
 ---
 

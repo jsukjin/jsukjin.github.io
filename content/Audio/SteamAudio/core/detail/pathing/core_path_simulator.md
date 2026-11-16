@@ -15,10 +15,10 @@ description: "baked probe path, runtime validation과 대체 경로를 SH/EQ 결
 검증하며, 필요하면 alternate path를 찾은 뒤 weighted paths를 SH/EQ/방향 결과로 합친다.
 
 - 전체 구조: [[core_06_pathing_overview|Pathing Overview]]
-- 입력 graph: [[detail/pathing/core_path_visibility|Path visibility 상세 분석]]
-- 저장된 route 표현: [[detail/pathing/core_path_data|PathData 상세 분석]]
-- search algorithm: [[detail/pathing/core_path_finder|PathFinder 상세 분석]]
-- output renderer: [[detail/pathing/core_path_effect|PathEffect 상세 분석]]
+- 입력 graph: [[core_path_visibility|Path visibility 상세 분석]]
+- 저장된 route 표현: [[core_path_data|PathData 상세 분석]]
+- search algorithm: [[core_path_finder|PathFinder 상세 분석]]
+- output renderer: [[core_path_effect|PathEffect 상세 분석]]
 
 ---
 

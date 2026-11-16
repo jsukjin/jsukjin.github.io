@@ -15,7 +15,7 @@ acoustic scene으로 관리하고 ray query를 simulation에 제공한다.
 backend interface다.
 
 > [!tip] 읽기 순서
-> [[detail/geometry/core_mesh|Mesh]] → [[detail/geometry/core_instanced_mesh|Instanced Mesh]] → [[detail/geometry/core_bvh|BVH]] → [[detail/geometry/core_scene|Scene]] 순으로 보면 데이터에서 query까지 이어진다.
+> [[core_mesh|Mesh]] → [[core_instanced_mesh|Instanced Mesh]] → [[core_bvh|BVH]] → [[core_scene|Scene]] 순으로 보면 데이터에서 query까지 이어진다.
 
 # 2. 개념과 데이터 흐름
 
@@ -158,7 +158,7 @@ struct SceneState
 - <strong style="color:#b3f594">propagation_medium.h</strong> [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/propagation_medium.h)
 - <strong style="color:#b3f594">air_absorption.cpp</strong> [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/air_absorption.cpp)
 - <strong style="color:#b3f594">distance_attenuation.cpp</strong> [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/distance_attenuation.cpp)
-- [Air absorption 상세 분석](../simulation/core_air_absorption.md)
+- [Air absorption 상세 분석](core_air_absorption.md)
 
 ---
 

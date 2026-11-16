@@ -14,7 +14,7 @@ Runtime foundation은 음향 알고리즘이 공통으로 쓰는
 메모리·자료구조·수학·오류·로깅·profiling 및 작업 scheduling 기반이다. 
 개별 effect나 simulator와 달리 이 모듈은 <strong style="color:#b3f594">대부분의 하위 계층에 횡단 의존</strong>된다.
 
-기존 상세 분석은 [[detail/system/core_Array|Array]], [[detail/system/core_matrix|Matrix]], [[detail/system/core_memory_allocator|Memory Allocator]], [[detail/system/core_simd|SIMD]], [[detail/system/core_util|Core Util]]을 참고한다.
+기존 상세 분석은 [[core_Array|Array]], [[core_matrix|Matrix]], [[core_memory_allocator|Memory Allocator]], [[core_simd|SIMD]], [[core_util|Core Util]]을 참고한다.
 
 ---
 # 2. 개념과 계층

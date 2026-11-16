@@ -129,8 +129,8 @@ IPLSimulationInputs.source + models + directFlags
 
 개념 및 구현 상세:
 
-- [[detail/simulation/core_air_absorption|Air Absorption]]
-- [[detail/dsp/core_direct_effect|DirectEffect: 결과를 샘플에 적용]]
+- [[core_air_absorption|Air Absorption]]
+- [[core_direct_effect|DirectEffect: 결과를 샘플에 적용]]
 - 구현 파일: `direct_simulator.*`, `distance_attenuation.*`, `air_absorption.*`, `directivity.*`, `deviation.*`
 
 ## 3.3 Direct는 언제 다시 계산해야 하나
@@ -203,7 +203,7 @@ Listener position ─► listener probe neighborhood
 따라서 Pathing은 단순히 bake data를 재생하는 단계만이 아니라, 저장 경로의 현재 유효성 확인과 fallback search를
 포함할 수 있다.
 
-Path 탐색 구조: [[detail/pathing/core_path_finder|PathFinder]] · 전체 흐름: [[core_06_pathing_overview|Pathing Overview]]
+Path 탐색 구조: [[core_path_finder|PathFinder]] · 전체 흐름: [[core_06_pathing_overview|Pathing Overview]]
 
 ---
 

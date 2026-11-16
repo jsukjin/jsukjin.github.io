@@ -166,8 +166,8 @@ option 조건을 구성한다. 등록 패턴의 요지는 함수 본문이 regis
 
 학습 링크
 - [[core_05_reflections_reverb_overview|Reflection/Reverboverview]]
-- [[Audio/SteamAudio/core/detail/reflections/core_reflections_reverb_modules|Reflection/Reverb source guide]]
-- [[Audio/SteamAudio/core/detail/probes/core_probes_baking|Probe baking]]
+- [[core_reflections_reverb_modules|Reflection/Reverb source guide]]
+- [[core_probes_baking|Probe baking]]
 
 ---
 # 6. <strong style="color:#b3f594">Convolution</strong> workload

@@ -115,7 +115,7 @@ flowchart TB
 - `detail/simulation/`: Direct simulation과 Air Absorption 등 시뮬레이션 모델
 - `detail/pathing/`: PathFinder, PathData, PathEffect, visibility와 path simulation
 - `detail/benchmark/`: `core/src/benchmark` 25개 파일, 21개 workload source 분석
-- `detail/integration/`: Host/엔진과 Steam Audio를 연결하는 실행 순서 메모 — [[detail/integration/UE - SteamAudio 각종 실행 order|UE 실행 순서 분석]]
+- `detail/integration/`: Host/엔진과 Steam Audio를 연결하는 실행 순서 메모 — [[UE - SteamAudio 각종 실행 order|UE 실행 순서 분석]]
 
 ## 5.1 이미 작성된 상세 분석
 
@@ -159,8 +159,8 @@ flowchart TB
 ## 직접음부터 구현까지
 
 1. [[core_03_simulation_overview|Simulation Overview]]의 Direct 절
-2. [[detail/simulation/core_air_absorption|Air Absorption]] 등 개별 모델
-3. [[detail/dsp/core_direct_effect|DirectEffect]]와 [[detail/dsp/core_eqeffect|EQEffect]]
+2. [[core_air_absorption|Air Absorption]] 등 개별 모델
+3. [[core_direct_effect|DirectEffect]]와 [[core_eqeffect|EQEffect]]
 4. [[core_04_effect_overview|Effect Overview]]의 출력/렌더링 경로
 
 ## 반사음부터 재생까지

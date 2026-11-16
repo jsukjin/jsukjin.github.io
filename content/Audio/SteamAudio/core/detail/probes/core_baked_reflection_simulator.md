@@ -75,16 +75,16 @@ data는 `IBakedReflectionsLookup` interface로 캐스팅되어 EnergyField/Rever
 아래 문서를 함께 보면 입력 준비부터 bake, 런타임 조회까지 흐름을 이어서 볼 수 있다.
 
 1. <strong style="color:#b3f594">Probe neighborhood 준비</strong> 
-	- [ProbeManager 상세](./core_probe_manager.md)에서 주변 probe 선택과 가중치 계산을 설명한다.
+	- [ProbeManager 상세](core_probe_manager.md)에서 주변 probe 선택과 가중치 계산을 설명한다.
 	
 2. <strong style="color:#b3f594">Probe별 결과 저장과 합산</strong> 
-	  - [BakedReflectionsData 상세](./core_baked_reflection_data.md)에서 EnergyField와 Reverb payload 구조를 설명한다.
+	  - [BakedReflectionsData 상세](core_baked_reflection_data.md)에서 EnergyField와 Reverb payload 구조를 설명한다.
 	  
 3. <strong style="color:#b3f594">Reflection bake 생성</strong> 
-	- [ReflectionBaker 상세](./core_reflection_baker.md)에서 bake 작업과 결과 기록 흐름을 설명한다.
+	- [ReflectionBaker 상세](core_reflection_baker.md)에서 bake 작업과 결과 기록 흐름을 설명한다.
 	
 4. <strong style="color:#b3f594">상위 처리 흐름</strong> 
-	- [Reflections & Reverb overview](../reflections/core_reflections_reverb_modules.md)에서 관련 모듈 사이의 전체 흐름을 확인할 수 있다.
+	- [Reflections & Reverb overview](core_reflections_reverb_modules.md)에서 관련 모듈 사이의 전체 흐름을 확인할 수 있다.
 
 ---
 

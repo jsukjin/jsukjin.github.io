@@ -202,7 +202,7 @@ MKL은 선형대수 계산을 위한 선택 기능이며 기본값은 OFF다.
 따라서 backend는 개별 package의 유무뿐 아니라 feature 조합에도 영향을 받는다.
 
 상세한 backend 연결은 [[core_08_foundation_backend_overview|Foundation & Backend Overview]]와
-[[detail/backend/core_acceleration_backends|Acceleration Backend 상세]]에서 확인한다.
+[[core_acceleration_backends|Acceleration Backend 상세]]에서 확인한다.
 
 # 5. 테스트·benchmark·도구 dependency
 

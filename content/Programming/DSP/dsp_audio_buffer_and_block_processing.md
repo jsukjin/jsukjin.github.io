@@ -46,4 +46,4 @@ void applyGain(float* const* channels, int numChannels,
 
 # 4. Core와 연결
 
-Core의 AudioBuffer/AudioBufferPool, effect `apply` 함수, C API의 `IPLAudioBuffer` 변환을 이 모델로 읽는다. [[Audio/SteamAudio/core/detail/dsp/core_dsp_modules|DSP module 분석]] 및 [[core_02_host_c_api_overview|Host C API Overview]]를 참고한다.
+Core의 AudioBuffer/AudioBufferPool, effect `apply` 함수, C API의 `IPLAudioBuffer` 변환을 이 모델로 읽는다. [[core_dsp_modules|DSP module 분석]] 및 [[core_02_host_c_api_overview|Host C API Overview]]를 참고한다.

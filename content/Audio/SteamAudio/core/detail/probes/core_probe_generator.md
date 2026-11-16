@@ -187,7 +187,7 @@ Host는 먼저 `iplProbeArrayCreate`로 probe 배열을 만든다.
 
 Bake를 수행할 때는 commit된 `Scene`과 `ProbeBatch`를 baker에 전달한다.
 관련 구현은 <strong style="color:#b3f594">api_probes.cpp</strong> [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_probes.cpp)에서 확인할 수 있다.
-공개 함수와 데이터 계약은 [Public API 상세](../api/core_public_api.md),
+공개 함수와 데이터 계약은 [Public API 상세](core_public_api.md),
 Host 측 호출 구조는 [Host C API Overview](core_02_host_c_api_overview.md)를 참고한다.
 
 이 문서에서 분석한 `octree_probes.*` 함수는 public 생성 type dispatch에 연결되어 있지 않다.

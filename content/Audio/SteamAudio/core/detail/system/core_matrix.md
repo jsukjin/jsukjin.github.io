@@ -662,10 +662,10 @@ Steam Audio의 matrix.h [링크](https://github.com/ValveSoftware/steam-audio/bl
 - 현재 transpose 계열 구현은 추가 테스트가 필요함
 
 > [!tip] 연관 문서
-> - [[detail/geometry/core_instanced_mesh]]
-> - [[detail/geometry/core_scene]]
-> - [[detail/geometry/core_mesh]]
-> - [[detail/dsp/core_panning_effect]]
+> - [[core_instanced_mesh]]
+> - [[core_scene]]
+> - [[core_mesh]]
+> - [[core_panning_effect]]
 
 ---
 

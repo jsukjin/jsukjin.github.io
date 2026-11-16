@@ -14,9 +14,9 @@ frequency-band gain으로 바꾸는 모델을 제공한다.
 PathSimulator가 여러 segment의 bend angle을 모아 EQ coefficient에 반영한다. 
 이는 단순한 거리에 따른 감쇠와 다른 효과다.
 
-- 경로 angle 생산: [[detail/pathing/core_path_data|SoundPath distance/deviation 데이터]]
-- 적용 결과: [[detail/pathing/core_path_simulator|PathSimulator의 EQ 결과]]
-- 최종 오디오 처리: [[detail/pathing/core_path_effect|PathEffect 렌더링]]
+- 경로 angle 생산: [[core_path_data|SoundPath distance/deviation 데이터]]
+- 적용 결과: [[core_path_simulator|PathSimulator의 EQ 결과]]
+- 최종 오디오 처리: [[core_path_effect|PathEffect 렌더링]]
 - 선행 DSP 개념: [[Programming/DSP/dsp_iir_filter_basics|Frequency-band EQ 기초]]
 
 ---

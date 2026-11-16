@@ -129,7 +129,7 @@ BVH는 bounding volume 계층으로 ray가 통과하지 않는 node 전체를 �
 triangle 탐색량을 줄인다. 
 ray와 triangle intersection, hit record, coordinate transform도 정확성에 영향을 준다.
 
-상세 분석: [[detail/geometry/core_bvh|BVH]], [[detail/geometry/core_mesh|Mesh]], [[detail/system/core_matrix|Matrix/transform]], [[detail/geometry/core_instanced_mesh|Instanced Mesh]]
+상세 분석: [[core_bvh|BVH]], [[core_mesh|Mesh]], [[core_matrix|Matrix/transform]], [[core_instanced_mesh|Instanced Mesh]]
 
 ---
 
@@ -196,7 +196,7 @@ Instanced mesh transform은 local mesh를 parent Scene의 위치/회전/스케�
 위치 벡터와 normal/direction vector의 transform 규칙은 서로 다르므로 
 source orientation과 surface normal을 함께 다룰 때 좌표 수학을 정확히 해야 한다.
 
-개념/코드: [[detail/system/core_matrix|Matrix]], [[detail/geometry/core_instanced_mesh|Instanced Mesh]], [[detail/geometry/core_scene|Scene]]
+개념/코드: [[core_matrix|Matrix]], [[core_instanced_mesh|Instanced Mesh]], [[core_scene|Scene]]
 
 ---
 

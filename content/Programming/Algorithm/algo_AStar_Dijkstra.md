@@ -49,4 +49,4 @@ bool relax(int from, int to, float edgeCost,
 
 # 4. Steam Audio에서 찾기
 
-[[Audio/SteamAudio/core/detail/pathing/core_path_finder|PathFinder 분석]]에서 queue priority, `mCosts`, `mParents`, thread index와 경로 복원 코드를 따라간다. Probe graph의 edge는 [[algo_ProbeVisibilityGraph|Probe Visibility Graph]] 문서와 [[Audio/SteamAudio/core/detail/pathing/core_path_visibility|Visibility 코드 분석]]을 참고한다.
+[[core_path_finder|PathFinder 분석]]에서 queue priority, `mCosts`, `mParents`, thread index와 경로 복원 코드를 따라간다. Probe graph의 edge는 [[algo_ProbeVisibilityGraph|Probe Visibility Graph]] 문서와 [[core_path_visibility|Visibility 코드 분석]]을 참고한다.

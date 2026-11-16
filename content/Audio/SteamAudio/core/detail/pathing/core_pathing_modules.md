@@ -14,8 +14,8 @@ Pathing은 direct line-of-sight가 차단된 환경에서 source→listener soun
 route를 검색해 path parameter를 만든다.
 
 - 개념 overview: [[core_06_pathing_overview|Pathing Overview]]
-- Scene ray query dependency: [[detail/geometry/core_geometry_pipeline|Geometry/Scene query]]
-- 결과를 적용하는 Effect : [[detail/dsp/core_dsp_modules|DSP Modules]]
+- Scene ray query dependency: [[core_geometry_pipeline|Geometry/Scene query]]
+- 결과를 적용하는 Effect : [[core_dsp_modules|DSP Modules]]
 
 ---
 # 2. 개념과 알고리즘
@@ -86,15 +86,15 @@ mCosts[threadIndex][start] = 0; // 시작 probe까지의 비용은 0
 
 ## 3.2 모듈 사이에서 경로 데이터가 이동한다
 
-1. <strong style="color:#b3f594">그래프 생성</strong> — [`path_visibility.*` 상세](./core_path_visibility.md)에서
+1. <strong style="color:#b3f594">그래프 생성</strong> — [`path_visibility.*` 상세](core_path_visibility.md)에서
    probe 사이의 가시성을 검사하고 연결 정보를 만든다.
-2. <strong style="color:#b3f594">경로 탐색</strong> — [`path_finder.*` 상세](./core_path_finder.md)에서
+2. <strong style="color:#b3f594">경로 탐색</strong> — [`path_finder.*` 상세](core_path_finder.md)에서
    그래프의 edge 비용을 누적해 최단 경로를 찾고 부모 노드를 기록한다.
-3. <strong style="color:#b3f594">결과 저장</strong> — [`path_data.*` 상세](./core_path_data.md)에서
+3. <strong style="color:#b3f594">결과 저장</strong> — [`path_data.*` 상세](core_path_data.md)에서
    bake 경로와 연관 데이터를 저장하고 다시 읽는다.
-4. <strong style="color:#b3f594">실시간 반영</strong> — [`path_simulator.*` 상세](./core_path_simulator.md)에서
+4. <strong style="color:#b3f594">실시간 반영</strong> — [`path_simulator.*` 상세](core_path_simulator.md)에서
    현재 source, listener, scene 상태에 맞는 경로 기여도를 계산한다.
-5. <strong style="color:#b3f594">오디오 출력</strong> — [`path_effect.*` 상세](./core_path_effect.md)에서
+5. <strong style="color:#b3f594">오디오 출력</strong> — [`path_effect.*` 상세](core_path_effect.md)에서
    계산된 SH/EQ 정보를 PCM 오디오에 적용한다.
 
 따라서 `PathFinder`의 결과만으로 소리가 만들어지는 것은 아니다.
@@ -103,8 +103,8 @@ mCosts[threadIndex][start] = 0; // 시작 probe까지의 비용은 0
 # 4. 사용법
 
 Host는 probe batch와 visibility/path baked data를 준비하고 source/listener를 입력해 path
-result를 갱신한다. 저장 구조는 [[detail/pathing/core_path_data|PathData]], runtime aggregation은 [[detail/pathing/core_path_simulator|PathSimulator]],
-PCM 전달은 [[detail/pathing/core_path_effect|PathEffect]] 문서에서 따라간다. API 시작점은 [[core_02_host_c_api_overview|Host ↔ C API Overview]]다.
+result를 갱신한다. 저장 구조는 [[core_path_data|PathData]], runtime aggregation은 [[core_path_simulator|PathSimulator]],
+PCM 전달은 [[core_path_effect|PathEffect]] 문서에서 따라간다. API 시작점은 [[core_02_host_c_api_overview|Host ↔ C API Overview]]다.
 
 # 5. 독립 C++ 핵심 예제
 

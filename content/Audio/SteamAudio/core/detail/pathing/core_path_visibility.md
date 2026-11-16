@@ -12,7 +12,7 @@ description: "Probe 간 ray visibility 판정, adjacency graph 생성, pruning�
 <strong style="color:#b3f594">path_visibility.h</strong> [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/path_visibility.h) / <strong style="color:#b3f594">path_visibility.cpp</strong>[링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/path_visibility.cpp)
 - probe 쌍 사이에 path graph edge를 둘 수 있는지 Sceneray query로 판단한다.
 - `path_visibility.fbs`는 이 graph의 adjacency list를 저장한다.
-- 경로 search 알고리즘은 [[detail/pathing/core_path_finder|PathFinder]]가 맡고, 최종 path table은 [[detail/pathing/core_path_data|PathData 상세 분석]]에 있다.
+- 경로 search 알고리즘은 [[core_path_finder|PathFinder]]가 맡고, 최종 path table은 [[core_path_data|PathData 상세 분석]]에 있다.
 
 ---
 
@@ -78,7 +78,7 @@ Job 완료 처리 뒤 `mAdjacent[i]`의 edge를 반대 node adjacency에도 추�
 Visibility graph는 일반적으로 path baking 중 생성된다. 
 `numSamples`, radius, threshold, visRange는 edge 판정 품질/비용을 정한다. 
 Scene geometry 또는 probe batch가 달라지면 baked graph를 갱신해야 한다. 
-공개 bake 경계는 api_baking.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_baking.cpp)와 [[detail/probes/core_probes_baking|Probe/Baking 상세]]에서 확인한다.
+공개 bake 경계는 api_baking.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_baking.cpp)와 [[core_probes_baking|Probe/Baking 상세]]에서 확인한다.
 
 ---
 # 5. 독립 C++ 핵심 예제

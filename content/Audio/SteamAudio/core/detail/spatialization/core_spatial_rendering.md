@@ -65,7 +65,7 @@ for (auto i = 0; i < out.numChannels(); ++i)
 ```
 
 Direction이 급변할 때 이전/현재 weight를 섞어 artifact를 줄인다. 
-상세 코드는 [[detail/dsp/core_panning_effect|PanningEffect 상세]]와 [[detail/dsp/core_audiobuffer|AudioBuffer 상세]]에서 이어진다.
+상세 코드는 [[core_panning_effect|PanningEffect 상세]]와 [[core_audiobuffer|AudioBuffer 상세]]에서 이어진다.
 
 ---
 # 4. 사용법

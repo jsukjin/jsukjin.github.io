@@ -17,7 +17,7 @@ runtime acoustic algorithm이 아닌 version/resource/debugger metadata 파일�
 
 > [!info] 버전 고정
 > 공식 원본은 Steam Audio v4.8.1 release tag를 기준으로 연결한다. 
-> build 관련 개념과 CMake 흐름은 [Build support 분석](./core_build_support.md)에서 확인한다.
+> build 관련 개념과 CMake 흐름은 [Build support 분석](core_build_support.md)에서 확인한다.
 
 # 2. 파일별 원본과 역할
 

@@ -94,7 +94,7 @@ vector를 만들고 update bytes를 기록한다.
 api_probes.cpp [링크](https://github.com/ValveSoftware/steam-audio/blob/v4.8.1/core/src/core/api_probes.cpp)의 `CProbeBatch::getEnergyField/getReverb`는 identifier와 probe
 index를 검사한 뒤 `BakedReflectionsData`에서 해당 데이터를 복사해 public output
 handle/array로 반환한다. 
-API와 내부 data ownership 경계는 [[../api/core_public_api|Public C API 분석]]에 연결했다.
+API와 내부 data ownership 경계는 [[core_public_api|Public C API 분석]]에 연결했다.
 
 ---
 # 5. 독립 C++ 핵심 예제

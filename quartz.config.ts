@@ -47,7 +47,7 @@ const config: QuartzConfig = {
           lightgray: "#21262d",
           gray: "#8b949e",
           darkgray: "#c9d1d9",
-          dark: "#7ee787",  // github-theme 다크모드 헤딩 녹색
+          dark: "#7ee787", // github-theme 다크모드 헤딩 녹색
           secondary: "#58a6ff",
           tertiary: "#8b949e",
           highlight: "rgba(56, 139, 253, 0.1)",
@@ -69,7 +69,8 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, hardLineBreaks: true }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.HardLineBreaks(),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),

@@ -110,15 +110,22 @@ button.desktop-explorer {
 
 .explorer-content {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   overflow: hidden;
-  overflow-y: auto;
   margin-top: 0.5rem;
+
+  & > .explorer-ul {
+    min-height: 0;
+    flex: 1 1 auto;
+    overscroll-behavior-y: contain;
+  }
 
   & ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    overscroll-behavior: contain;
 
     & li > a {
       color: var(--dark);
@@ -147,7 +154,9 @@ button.desktop-explorer {
   }
 
   .folder-outer > ul {
-    overflow: hidden;
+    // Clip the collapse animation without creating a nested scroll container.
+    min-height: 0;
+    overflow: clip;
     margin-left: 6px;
     padding-left: 0.8rem;
     border-left: 1px solid var(--lightgray);
